@@ -19,8 +19,8 @@ public class BookPayment extends Payment {
 
 	}
 
-	private void generateCommisionPayment(Product product) {
-		System.out.println("Generate Commision for agent.");
+	public double generateCommisionPayment(Product product) {
+		System.out.println("Generate Commision for agent for product "+ product.getName());
 
 		// commison calculation logic
 		double commision = 0;
@@ -28,7 +28,8 @@ public class BookPayment extends Payment {
 			commision = product.getPrice() * 0.05;
 		}
 
-		System.out.println("Commision for agent" + commision);
+		System.out.println("Commision = " + commision);
+		return commision;
 
 	}
 
